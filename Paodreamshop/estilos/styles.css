@@ -33,12 +33,12 @@ ul {
 }
 .menu{
   display: flex;
-  height: 40%;
+  height: 30%;
   width: 100%;
   justify-content: flex-end;	
 }
 .menu img{
-	width: 40px;
+	width: 30px;
 	padding-right: 20px;
 }
 
@@ -185,7 +185,7 @@ font-size: 30px;
     top:100%;
     z-index: 1;
     background-color: white;
-    padding: 20px;
+    
     min-height: 400px;
     min-width: 300px;
 }
