@@ -187,8 +187,31 @@ font-size: 30px;
     background-color: white;
     
     min-height: 400px;
-    min-width: 300px;
+    min-width: 500px;
 }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+}
+
+td img{
+	width: 500px;
+	height: 100px;
+}
+th,
+td {
+  padding: 20px 8px;
+  text-align: center;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 10px; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+.
 
 
 
@@ -219,6 +242,21 @@ div#slider figure {
 75% { left: -300%; }
 95% { left: -300%; }
 100% { left: -400%; }
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FFB4C6;    /* color of the scroll thumb */
+  /* roundness of the scroll thumb */
+  border: 3px solid #FFB4C6;  /* creates padding around scroll thumb */
+  border-radius: 3px;
 }
 
 

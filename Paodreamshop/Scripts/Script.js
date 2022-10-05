@@ -33,11 +33,7 @@ function agregarProducto(e) {
         
          
          leerDatosProducto(producto);
-         sub=parseInt(producto.querySelector('.precio').textContent);
-         console.log(sub)
-         cant=1;
-         const suma = new subTotal(sub,cant);
-         suma.sumaprecio()
+         
     }
 }
 
@@ -101,7 +97,7 @@ function carritoHTML() {
          const row = document.createElement('tr');
          row.innerHTML = `
               <td>  
-                   <img src="${producto.imagen}" width=100>
+                   <img src="${producto.imagen}" >
               </td>
               <td>${producto.titulo}</td>
               <td>${producto.precio}</td>
@@ -111,6 +107,7 @@ function carritoHTML() {
               </td>
          `;
          contenedorCarrito.appendChild(row);
+
          guardarProductoLocalStorage(producto);
          
     });
@@ -173,7 +170,7 @@ function leerLocalStorage() {
 
           row.innerHTML=`
           <td>
-          <img src="${producto.imagen}" width=100>
+          <img src="${producto.imagen}" >
           </td>
 
      <td>
@@ -197,7 +194,7 @@ function leerLocalStorage() {
 function eliminarProductoLocalStorage(producto){
      let productosLS;
      productosLS=obtenerProductosLocalStorage();
-     console.log(productosLS);
+     
 
 
      for (var i =0; i< productosLS.length; i++) {
@@ -215,21 +212,3 @@ function vaciarLocalStorage(){
      localStorage.clear();
 }
 
-class subTotal{
-
-     constructor(precio,cantidadP){
-          this.precio=precio;
-          this.cantidadP=cantidadP;
-     }
-
-     sumaprecio(){
-          var total =0;
-          total= total+this.precio
-          var text = document.createTextNode("total")
-           document.getElementById("#Subtotal").appendChild(text)
-
-     }
-
-
-
-}
