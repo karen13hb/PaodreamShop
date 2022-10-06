@@ -96,8 +96,8 @@ function carritoHTML() {
     articulosCarrito.forEach(producto => {
          const row = document.createElement('tr');
          row.innerHTML = `
-              <td>  
-                   <img src="${producto.imagen}" >
+              <td style="width: 50px" >
+                <img src="${producto.imagen}" style="width: 100%;" >
               </td>
               <td>${producto.titulo}</td>
               <td>${producto.precio}</td>
@@ -169,9 +169,10 @@ function leerLocalStorage() {
           const row = document.createElement("tr");
 
           row.innerHTML=`
-          <td>
-          <img src="${producto.imagen}" >
+          <td style="width: 50px" >
+          <img src="${producto.imagen}" style="width: 100%;" >
           </td>
+
 
      <td>
      ${producto.titulo}

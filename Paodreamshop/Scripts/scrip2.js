@@ -70,8 +70,8 @@ class Aux {
 	         
 	         row.innerHTML = `
 
-	              <td>  
-	                   <img src="${producto.imagen}" width=100>
+	              <td style="width: 300px" >
+	                <img src="${producto.imagen}" style="width: 100%;" >
 	              </td>
 	              <td>${producto.titulo}</td>
 	              <td>${producto.precio}</td>
@@ -140,8 +140,8 @@ class Aux {
 	          const row = document.createElement("tr");
 
 	          row.innerHTML=`
-	          <td>
-	          <img src="${producto.imagen}" width=100>
+	          <td style="width: 300px" >
+	               <img src="${producto.imagen}" style="width: 100%;" >
 	          </td>
 
 	     <td>

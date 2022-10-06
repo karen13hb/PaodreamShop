@@ -5,6 +5,9 @@
 a{
 	text-decoration: none;
 }
+body{
+	overflow-x: hidden;
+}
 p, a{
 	font-family: 'Dangrek', cursive;
 }
@@ -164,6 +167,9 @@ font-size: 30px;
 .separador{
 	width: 40%;	
 }
+.corazon-title{
+	width: 5%;
+}
 .titulo.tseparador{
 	margin-top:20px ;
 	margin-bottom:20px ;
@@ -186,8 +192,8 @@ font-size: 30px;
     z-index: 1;
     background-color: white;
     
-    min-height: 400px;
-    min-width: 500px;
+    min-height: 500px;
+    min-width: 400px;
 }
 table {
   border-collapse: collapse;
@@ -195,23 +201,56 @@ table {
   
 }
 
-td img{
-	width: 500px;
-	height: 100px;
-}
+
 th,
 td {
-  padding: 20px 8px;
+ 
   text-align: center;
   border-bottom: 1px solid #E1E1E1; }
-th:first-child,
 td:first-child {
-  padding-left: 10px; }
-th:last-child,
-td:last-child {
-  padding-right: 0; }
+  padding: 20px 8px;
+ }
 
-.
+
+thead tr th{
+  	padding: 25px ;
+  }
+td img{
+	border-radius: 5px;
+}
+
+.btn-flotante {
+	
+	
+	
+	position: fixed;
+	
+	transition: all 300ms ease 0ms;
+	
+	z-index: 99;
+}
+.btn-flotante:hover {
+	
+	
+	transform: translateY(-7px);
+}
+@media only screen  {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+} 
+.img-flota{
+	height: 70px;
+	width: 70px;
+}
+
+.img-auxiliar{
+	 width: 100%;
+}
+
 
 
 
