@@ -8,7 +8,7 @@ a{
 body{
 	overflow-x: hidden;
 }
-p, a{
+p, a, table,label{
 	font-family: 'Dangrek', cursive;
 }
 ul {
@@ -17,8 +17,33 @@ ul {
 .contenedor-principal{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 120px auto 20% ;
+	grid-template-rows: 120px auto auto ;
 
+} 
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+.button {
+	   margin-bottom: 1rem;
+	  display: block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    
 }
 .cont-head{
 	grid-row: 1/2;
@@ -65,9 +90,7 @@ ul {
 text-align: center;
 font-size: 30px;
 }
-.productos{
-	
-}
+
 .productoslista{
 	display: flex;
 	flex-direction: row;
@@ -184,38 +207,38 @@ font-size: 30px;
 .submenu #carrito{
     display: none;
 }
+
 .submenu:hover #carrito{
     display: block;
     position: absolute;
-    right:0;
+    right:10px;
     top:100%;
     z-index: 1;
     background-color: white;
-    
     min-height: 500px;
     min-width: 400px;
 }
-table {
+#carrito table {
   border-collapse: collapse;
   border-spacing: 0;
   
 }
 
 
-th,
+#carrito th,
 td {
  
   text-align: center;
   border-bottom: 1px solid #E1E1E1; }
-td:first-child {
+#carrito td:first-child {
   padding: 20px 8px;
  }
 
 
-thead tr th{
+#carrito thead tr th{
   	padding: 25px ;
   }
-td img{
+#carrito  td img{
 	border-radius: 5px;
 }
 
@@ -250,9 +273,6 @@ td img{
 .img-auxiliar{
 	 width: 100%;
 }
-
-
-
 
 
 
@@ -297,6 +317,56 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #FFB4C6;  /* creates padding around scroll thumb */
   border-radius: 3px;
 }
+
+
+.marcas{
+	display: flex;
+	align-items: center;
+	margin: 20px;
+}
+.tmarcas{
+	padding-right: 30px;
+}
+
+.logo-1 img{
+
+	width: 15%;
+	height: 15%;
+}
+.logo-1
+{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+.cont-footer{
+	grid-row: 3/4;
+	
+	text-align: center;
+
+}
+.cont-footer p{
+	color:#FFB4C6 ;
+	font-size: 16px;
+	
+}
+.socialmedia img{
+	width: 3%;
+	height: 3%;
+}
+.contacto{
+	background-color: black;
+}
+.copyright{
+	height: 30%;
+	background-color:#FFB4C6 ;
+}
+.copyright p{
+	color: black;
+}
+
+
+
 
 
 

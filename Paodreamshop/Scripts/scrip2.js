@@ -2,11 +2,13 @@ const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('.productos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); 
+const procesarPedidoBtn = document.getElementById('procesar-pedido');
+
 let articulosCarrito = [];
 
 
 
-class Aux {
+export class Aux {
 	
 
 	agregarProducto(e) {
@@ -46,11 +48,45 @@ class Aux {
 	    
 
 	}
+	procesarPedido(e){
+        e.preventDefault();
+
+        if(this.obtenerProductosLocalStorage().length === 0){
+            alert("Ingrese productos al carrito")
+        }
+        else {
+            location.href = "compra.php";
+        }
+    }
+	leerLocalStorageCompra(){
+        let productosLS;
+        productosLS = this.obtenerProductosLocalStorage();
+        productosLS.forEach(function (producto){
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>
+                    <img src="${producto.imagen}" width=100>
+                </td>
+                <td>${producto.titulo}</td>
+                <td>${producto.precio}</td>
+                <td>
+                    <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
+                </td>
+                <td id='subtotales'>${producto.precio * producto.cantidad}</td>
+                <td>
+                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
+                </td>
+            `;
+            listaCompra.appendChild(row);
+        });
+    }
+
 
 	eliminarProducto(e) {
 	    e.preventDefault();
 	    if(e.target.classList.contains('borrar-producto') ) {
-	         //e.target.parentElement.parentElement.remove();
+			
+	         e.target.parentElement.parentElement.remove();
 	        const productoId = e.target.getAttribute('data-id');
 	         
 	         
@@ -58,7 +94,8 @@ class Aux {
 	        articulosCarrito = articulosCarrito.filter(producto => producto.id !== productoId);
 
 	        this.eliminarProductoLocalStorage(productoId);
-	        this.carritoHTML();  
+	        this.carritoHTML();
+	        this.calcularTotal();  
 	    }
 	}
 
@@ -85,6 +122,7 @@ class Aux {
 	         
 
 	    });
+	    this.calcularTotal();
 
 	    
 	}
@@ -159,6 +197,7 @@ class Aux {
 
 	          contenedorCarrito.appendChild(row);
 	     })
+	     this.calcularTotal();
 	     
 	}
 
@@ -179,6 +218,45 @@ class Aux {
 	vaciarLocalStorage(){
 	     localStorage.clear();
 	}
+
+	calcularTotal(){
+        let productosLS;
+        let total = 0;
+        productosLS = this.obtenerProductosLocalStorage();
+        for(let i = 0; i < productosLS.length; i++){
+            let element = Number(productosLS[i].precio * productosLS[i].cantidad);
+            total = total + element;
+            
+        }
+        
+          
+          
+           
+        document.getElementById('subtotal').innerHTML = "S/. " + total;
+    }
+
+	obtenerEvento(e) {
+        e.preventDefault();
+        let id, cantidad, producto, productosLS;
+        if (e.target.classList.contains('cantidad')) {
+            producto = e.target.parentElement.parentElement;
+            id = producto.querySelector('a').getAttribute('data-id');
+            cantidad = producto.querySelector('input').value;
+            let actualizarMontos = document.querySelectorAll('#subtotales');
+            productosLS = this.obtenerProductosLocalStorage();
+            productosLS.forEach(function (productoLS, index) {
+                if (productoLS.id === id) {
+                    productoLS.cantidad = cantidad;                    
+                    actualizarMontos[index].innerHTML = Number(cantidad * productosLS[index].precio);
+                }    
+            });
+            localStorage.setItem('productos', JSON.stringify(productosLS));
+            
+        }
+        else {
+            console.log("click afuera");
+        }
+    }
 
 
 }
@@ -202,6 +280,8 @@ function cargarEventos(){
      vaciarCarritoBtn.addEventListener('click', (e)=>{a.vaciarArray(e)});
 
      document.addEventListener("DOMContentLoaded", a.leerLocalStorage());
+
+	 procesarPedidoBtn.addEventListener('click', (e)=>{a.procesarPedido(e)});
 
 }
 

@@ -1,0 +1,74 @@
+.botones-compra{
+    display: flex;
+    justify-content: center;
+   
+
+}
+.boton-index,.boton-compra{
+    margin:3%;
+}
+.boton-u{
+  margin-bottom: 1rem;
+  display: block;
+  height: 38px;
+  padding: 0 30px;
+  color: black;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #FFB4C6;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+  box-sizing: border-box;
+  
+
+}
+.tablec{
+
+    width: 100%;
+   
+    margin-bottom: 10%;
+    border: transparent;
+  
+    
+
+}
+
+.tablac2 {
+    
+    width: 80%;
+    margin: auto;
+
+  }
+  .tablac2 tr, th {
+
+padding: 8px;
+
+
+}
+.tablac2 th:first-child{
+  
+  width: 10%;
+ 
+
+}
+.tablac2 th:nth-child(2){
+  
+  width: 90%;
+ 
+
+}
+input{
+  width: 98%;
+  padding: 10px;
+  
+}
+
+
+

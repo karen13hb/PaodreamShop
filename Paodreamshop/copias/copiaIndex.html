@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PaodreamShop</title>
+	<link rel="stylesheet" type="text/css" href="estilos/styles.css">		
+	<link rel="stylesheet" type="text/css" href="estilos/slider.css">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">	
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="contenedor-principal">
+	<header class="cont-head">
+		<div class="aviso">
+		 <p>Envio gratis por compras superiores a $100.000</p>
+		</div>
+		
+		<div class="menu">
+			<img class="menuimg" src="img/user.png" alt="">
+			<img class="menuimg" src="img/lupa.png" alt="">
+			<div class="submenu">
+				<img class="menuimg" src="img/carrito.png" alt="">
+				<div id="carrito">
+					
+                        <table id="lista-carrito" class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+									<th>Cantidad</th>
+									<th></th>            
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>                                                                        
+                        
+                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                        <p id="subtotal"></p>
+                </div>
+			</div>
+			
+		</div>
+
+		<div class="menu-principal">
+
+			<a href="#">INICIO</a>
+			<a href="#">PRODUCTOS</a>
+			<a href="#">DREAM SHOP</a>
+			<a href="#">DREAMS</a>
+			<a href="#">CONTACTO</a>
+		</div>
+			
+	</header>
+	<main class= "cont-main">
+
+		<div id="slider">
+			<figure>
+				<img src="img/banner.jpeg" alt="">
+				<img src="img/banner-2.jpeg" alt="">
+				<img src="img/banner-3.jpeg" alt="">
+				<img src="img/banner-4.jpeg" alt="">
+				<img src="img/banner-2.jpeg" alt="">
+			</figure>
+		</div>
+		<br><br>
+
+
+		<div class="contenedor-nuevos">
+			<div class="titulo">
+				<p>¡RECIEN LLEGADOS!</p>
+			</div>
+			<!--
+				For para las imagenes 
+			-->
+			<div class="productos">
+				<ul class="productoslista">
+				    <li>
+				    	<div class="item-cont">
+				    		<img src="img/tintadelabios.jpg" alt="" class="imgproduct">
+				    		
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito">
+					    			<a href="#"  data-id="1">
+					    				<img  src="img/carrito.png" alt="" class="agregar-carrito ">
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Tinta de Labios</a>
+					    			<p class="precio">4.500</p>
+					    		</div>
+				    		</div>
+						</div>
+				    		
+				    </li>
+				  
+				    <li>
+				    	<div class="item-cont">
+				    		<img src="img/eyeshadow-febble.jpg" alt="" class="imgproduct">
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito">
+					    			
+					    			<a href="#"  data-id="2" >
+					    				<img src="img/carrito.png" alt="" class="agregar-carrito">
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Eye shadow Febble</a>
+					    			<p class="precio">20.500</p>
+					    		</div>
+				    		</div>
+						</div>
+				    </li>
+				    <li>
+				    	<div class="item-cont">
+				    		<img src="img/esponjas.jpg" alt="" class="imgproduct">
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito">
+					    			
+					    			<a href="# " data-id="3">
+					    				<img src="img/carrito.png" alt="" class="agregar-carrito">
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Esponjas</a>
+					    			<p class="precio">15.100</p>
+					    		</div>
+				    		</div>
+						</div>
+				    </li>
+				    <li>
+				    	<div class="item-cont">
+				    		<img src="img/balsamo-ushas.jpg" alt="" class="imgproduct">
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito">
+					    			
+					    			<a href="#" data-id="4">
+					    				<img src="img/carrito.png" alt="" class="agregar-carrito">
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Balsamo Ushas</a>
+					    			<p class="precio">9.500</p>
+					    		</div>
+				    		</div>
+						</div>
+				    </li>
+				    <li>
+				    	<div class="item-cont">
+				    		<img class="imgproduct" src="img/tonico.jpg" alt="">
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito">
+					    			<a href="#" data-id="5">
+					    				<img src="img/carrito.png" alt="" class="agregar-carrito">
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Tonico acido hyaluronico</a>
+					    			<p class="precio">35.000</p>
+					    		</div>
+				    		</div>
+						</div>
+				    </li>
+				    <li>
+				    	<div class="item-cont">
+				    		<img class="imgproduct" src="img/brocha-ojos.jpg" alt="">
+				    		<div class="hv-transparente">
+					    		<div class="btn-carrito ">
+					    			
+					    			<a href="#" data-id="6">
+					    				<img  src="img/carrito.png" alt="" class="agregar-carrito" >
+					    			</a>
+					    		</div>
+					    		<div class="info-producto">
+					    			<a class="title-nombre" href="#">Brocha de ojos</a>
+					    			<p class="precio">19.500</p>
+					    		</div>
+				    		</div>
+						</div>
+				    </li>
+                </ul>
+				
+			</div>
+
+			
+		</div>
+
+
+		<div class="contenedor-dreams">
+			<div class="titulo tseparador">
+				<div class="separador"><img src="img/separadorL.svg" alt=""></div>
+				<p>Dreams</p>
+				<div class="separador"><img src="img/separadorR.svg" alt=""></div>
+				
+			</div>
+			<div class="collage">
+				<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-76457e76-9b95-4e43-b4f4-c7704f239d83"></div>
+			</div>
+
+			
+		</div>
+
+
+		<div class="contenedor-corazon">
+			<div class="titulo tseparador">
+				<div class="separador"><img src="img/separadorL.svg" alt=""></div>
+				<div class="corazon-title"><img src="img/cora.svg" alt=""></div>
+				<div class="separador"><img src="img/separadorR.svg" alt=""></div>
+				
+			</div>
+			<br>
+			<br>
+			<div class="marcas">
+				<div class="titulo tmarcas">
+					<p>Nuestras Marcas</p>
+				</div>
+
+				<div class="supercart">
+					<div class="wrapper">
+					    <i id="left" class="fa-solid fa-angle-left"></i>
+					      <div class="carousel">
+						        <img src="img/atenea.png" alt="img" draggable="false">
+						        <img src="img/anik.jpg" alt="img" draggable="false">
+						        <img src="img/Bioaqua.png" alt="img" draggable="false">
+						        <img src="img/rubyrose.png" alt="img" draggable="false">
+						        <img src="img/ushas.png" alt="img" draggable="false">
+						        <img src="img/lula.png" alt="img" draggable="false">
+						        <img src="img/ame.jpg" alt="img" draggable="false">
+						        <img src="img/karite.png" alt="img" draggable="false">
+						        <img src="img/myk.png" alt="img" draggable="false">
+						        <img src="img/feble.png" alt="img" draggable="false">
+						       
+
+					      </div>
+					    <i id="right" class="fa-solid fa-angle-right"></i>
+					</div>
+					
+				</div>
+
+			
+					
+				</div>
+			</div>
+
+
+		<div class="logo-1">
+			<img src="img/logo.jpg" alt="img" >
+		</div>
+
+		<div >
+		  <a href="#" class="btn-flotante"><img class="img-flota"  src="img/carrito.png" alt="">
+		  </a>
+	    </div>
+    </main>
+
+    
+	<footer class="cont-footer">
+		<div class="contacto">
+			<p>Contactanos</p>
+			<div class="socialmedia">
+				<img src="img/instagram.png" alt="img" >
+				<img src="img/wpp.png" alt="img" >
+				
+				
+			</div>
+
+			
+		</div>
+		<div class="copyright">
+			<p>Copyright © 2022 PaodreamShop | makeup | política de privacidad</p>
+		</div>
+	</footer>
+</div>
+
+<script src="Scripts/scrip2.js" ></script>
+<script src="Scripts/slide.js" ></script>
+
+
+
+</body>
+</html>
